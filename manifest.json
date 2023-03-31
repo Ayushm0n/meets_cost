@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Meetings cost calculator",
+  "description": "Extension that calculates the cost of a google meet",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popups/base.html",
+    "default_icon": "./images/logo.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://calendar.google.com/calendar/*"
+      ],
+      "run_at": "document_end"
+
+    }]
+
+}
